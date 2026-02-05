@@ -468,6 +468,39 @@
     </div>
 
     <script>
+
+        // Memastikan DOM siap
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuOpenBtn = document.getElementById('mobile-menu-open');
+            const menuCloseBtn = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu(show) {
+                if (show) {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+
+            if (menuOpenBtn) {
+                menuOpenBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleMenu(true);
+                });
+            }
+
+            if (menuCloseBtn) {
+                menuCloseBtn.addEventListener('click', () => toggleMenu(false));
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => toggleMenu(false));
+            });
+            
         // Background Animation
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
@@ -544,6 +577,7 @@
 </body>
 
 </html>
+
 
 
 
