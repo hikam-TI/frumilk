@@ -95,45 +95,22 @@
     <!-- Animated Background -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-[60] glass-card py-4 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-xl md:text-2xl font-bold tracking-tighter text-[#3E2723]">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter text-[#3E2723]">
             FRUMILK<span class="text-mocha">.</span>
         </div>
-        
-        <!-- Menu Desktop -->
-        <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-[#3E2723]">
+        <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-widest text-[#3E2723]">
             <a href="#hero" class="hover:text-mocha transition">Beranda</a>
             <a href="#keunggulan" class="hover:text-mocha transition">Keunggulan</a>
             <a href="#katalog" class="hover:text-mocha transition">Katalog</a>
             <a href="#harga" class="hover:text-mocha transition">Harga</a>
+            <a href="#testimoni" class="hover:text-mocha transition">Testimoni</a>
         </div>
-
-        <!-- Tombol Menu HP (Garis Tiga) -->
-        <button id="mobile-menu-open" class="md:hidden text-2xl text-[#3E2723] p-2 relative z-[70] focus:outline-none" style="touch-action: manipulation;">
+        <button class="md:hidden text-2xl text-[#3E2723]" id="mobile-menu-btn">
             <i class="fas fa-bars"></i>
         </button>
     </nav>
-
-    <!-- Overlay Menu Mobile -->
-    <div id="mobile-menu" class="fixed inset-0 bg-[#FFFDF5] flex flex-col p-8 md:hidden shadow-2xl overflow-y-auto">
-        <div class="flex justify-between items-center mb-12">
-            <div class="text-2xl font-bold text-[#3E2723]">FRUMILK<span class="text-mocha">.</span></div>
-            <button id="mobile-menu-close" class="text-4xl text-[#3E2723] p-2 focus:outline-none">&times;</button>
-        </div>
-        <div class="flex flex-col space-y-8">
-            <a href="#hero" class="mobile-link text-3xl font-bold text-[#3E2723] border-b border-black/5 pb-4">Beranda</a>
-            <a href="#keunggulan" class="mobile-link text-3xl font-bold text-[#3E2723] border-b border-black/5 pb-4">Keunggulan</a>
-            <a href="#katalog" class="mobile-link text-3xl font-bold text-[#3E2723] border-b border-black/5 pb-4">Katalog</a>
-            <a href="#harga" class="mobile-link text-3xl font-bold text-[#3E2723] border-b border-black/5 pb-4">Harga</a>
-            <a href="https://wa.me/62895619624579" target="_blank" class="bg-[#3E2723] text-white text-center py-5 rounded-2xl font-bold mt-4 shadow-xl active:scale-95 transition-transform">
-                <i class="fab fa-whatsapp mr-2"></i>Pesan Sekarang
-            </a>
-        </div>
-        <div class="mt-auto text-center text-sm text-gray-400 py-6">
-            &copy; 2026 FruMilk Official
-        </div>
-    </div>
     
     <!-- Hero Section -->
     <section id="hero" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 text-center">
@@ -577,6 +554,7 @@
 </body>
 
 </html>
+
 
 
 
