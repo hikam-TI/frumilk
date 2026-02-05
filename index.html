@@ -95,23 +95,43 @@
     <!-- Animated Background -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-card transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-tighter text-[#3E2723]">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-card transition-all duration-300 py-3 md:py-4 px-5 md:px-12 flex justify-between items-center">
+        <div class="text-xl md:text-2xl font-bold tracking-tighter text-[#3E2723]">
             FRUMILK<span class="text-mocha">.</span>
         </div>
-        <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-widest text-[#3E2723]">
+        
+        <!-- Menu Desktop -->
+        <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-[#3E2723]">
             <a href="#hero" class="hover:text-mocha transition">Beranda</a>
             <a href="#keunggulan" class="hover:text-mocha transition">Keunggulan</a>
             <a href="#katalog" class="hover:text-mocha transition">Katalog</a>
             <a href="#harga" class="hover:text-mocha transition">Harga</a>
-            <a href="#testimoni" class="hover:text-mocha transition">Testimoni</a>
         </div>
-        <button class="md:hidden text-2xl text-[#3E2723]" id="mobile-menu-btn">
+
+        <!-- Tombol Menu HP -->
+        <button id="mobile-menu-open" class="md:hidden text-2xl text-[#3E2723] p-2 focus:outline-none" aria-label="Buka Menu">
             <i class="fas fa-bars"></i>
         </button>
     </nav>
 
+    <!-- Overlay Menu Mobile -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#FFFDF5] z-[100] md:hidden flex flex-col p-6">
+        <div class="flex justify-between items-center mb-10">
+            <div class="text-2xl font-bold text-[#3E2723]">FRUMILK<span class="text-mocha">.</span></div>
+            <button id="mobile-menu-close" class="text-3xl text-[#3E2723] p-2" aria-label="Tutup Menu">&times;</button>
+        </div>
+        <div class="flex flex-col space-y-6">
+            <a href="#hero" class="mobile-link text-3xl font-bold text-[#3E2723] border-b border-black/5 pb-2">Beranda</a>
+            <a href="#keunggulan" class="mobile-link text-3xl font-bold text-[#3E2723] border-b border-black/5 pb-2">Keunggulan</a>
+            <a href="#katalog" class="mobile-link text-3xl font-bold text-[#3E2723] border-b border-black/5 pb-2">Katalog</a>
+            <a href="#harga" class="mobile-link text-3xl font-bold text-[#3E2723] border-b border-black/5 pb-2">Harga</a>
+            <a href="https://wa.me/62895619624579" target="_blank" class="bg-[#3E2723] text-white text-center py-4 rounded-2xl font-bold mt-4 shadow-lg">Pesan Lewat WA</a>
+        </div>
+        <div class="mt-auto text-center text-sm text-gray-400 pb-4">
+            &copy; 2026 FruMilk Official
+        </div>
+    </div>
     <!-- Hero Section -->
     <section id="hero" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 text-center">
         <div class="max-w-4xl reveal">
@@ -120,8 +140,7 @@
                 Segelas Kebahagiaan dalam <span class="italic text-mocha">Setiap Tegukan</span>
             </h1>
             <p class="text-lg md:text-xl text-[#2D1B13] font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
-                FRUMILK menghadirkan minuman susu dengan campuran rasa buah yang segar, disajikan dengan tambahan es
-batu yang menyegarkan. 
+                Kombinasi susu sapi premium dengan ekstrak buah segar asli. Nikmati kesegaran yang menyehatkan kapan saja.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#katalog" class="btn-primary px-8 py-4 rounded-full font-bold">Lihat Menu</a>
@@ -421,7 +440,7 @@ batu yang menyegarkan.
                 <p class="text-slate-200 mb-12 max-w-xl mx-auto text-lg relative z-10 font-medium">Beli FruMilk sekarang untuk mendapatkan sensasinya</p>
                 <div class="flex justify-center relative z-10">
                     <!-- WhatsApp Link (Single Main Button) -->
-                    <a href="https://wa.me/6281234567890?text=Halo%20FruMilk,%20saya%20ingin%20memesan%20susu%20buah%20segar!" 
+                    <a href="https://wa.me/62895619624579?text=Halo%20FruMilk,%20saya%20ingin%20memesan%20FruMilk!" 
                        target="_blank" 
                        class="bg-[#FFFDF5] text-[#3E2723] hover:bg-white px-12 py-5 rounded-full font-black text-xl transition transform hover:scale-105 shadow-xl inline-block">
                         Beli Sekarang <i class="fab fa-whatsapp ml-2 text-green-600"></i>
@@ -522,6 +541,7 @@ batu yang menyegarkan.
 </body>
 
 </html>
+
 
 
 
